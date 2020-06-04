@@ -1,5 +1,7 @@
 # SuiteSparse for Android
 
+tested on Ubuntu 16.04 LTS
+
 -----
 
 ## Build
@@ -14,7 +16,7 @@
   cd clapack-3.2.1
   mkdir build & cd build
   cp ../../make_clapack.sh ./
-  ./make_clapack.sh # modify
+  ./make_clapack.sh
   ```
 
 * build suitesparse
@@ -23,7 +25,7 @@
   mkdir build & cd build
   cp ../../make_suitesparse.sh
 
-  ./make_suitesparse.sh # modify
+  ./make_suitesparse.sh
   sudo make install
   ```
 
