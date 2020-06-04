@@ -4,6 +4,11 @@
 
 ## Build
 
+* first, set NDK environment variable in .bashrc as following
+  ```sh
+  export ANDROID_NDK=/home/cg/tools/android_tools/android-ndk-r16b
+  ```
+
 * build clapack
   ```sh
   cd clapack-3.2.1
@@ -24,12 +29,12 @@
 
 ## Usage with Android NDK
 
-* add code in your Android.mk as following
+* add the following code in your Android.mk
   ```makefile
   # include $(LARVIO_ROOT)/ndk-modules/spqr/Android.mk
 
   SPQR_ROOT := /opt/spqr_cg # install dir
-  CLAPACK_ROOT := /home/cg/projects/3rdparty/suitesparse_for_android/clapack-3.2.1/build # source build dir
+  CLAPACK_ROOT := <path-to-suitesparse_for_android>/clapack-3.2.1/build # source build dir
 
   LOCAL_C_INCLUDES += $(SPQR_ROOT)/include/suitesparse/
 

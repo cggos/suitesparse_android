@@ -1,11 +1,11 @@
-export CLAPACKDIR=/home/cg/projects/3rdparty/suitesparse_for_android/clapack
+export CLAPACKDIR=../../clapack-3.2.1
 
 cmake \
-  -DCMAKE_TOOLCHAIN_FILE=/home/cg/tools/android_tools/android-ndk-r16b/build/cmake/android.toolchain.cmake \
+  -DCMAKE_TOOLCHAIN_FILE=${ANDROID_NDK}/build/cmake/android.toolchain.cmake \
   -DCMAKE_INSTALL_PREFIX="/opt/spqr_cg/" \
   -DCMAKE_CXX_FLAGS="-std=c++11" \
   -DCMAKE_BUILD_TYPE=Release \
-  -DANDROID_NDK=/home/cg/tools/android_tools/android-ndk-r16b \
+  -DANDROID_NDK=${ANDROID_NDK} \
   -DANDROID_TOOLCHAIN="gcc" \
   -DANDROID_ABI="armeabi-v7a" \
   -DANDROID_STL="gnustl_static" \
